@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  cassandra1:
+    image: cassandra:latest
+    ports:
+      - 192.168.1.200:9042:9042
+    environment:
+      - CASSANDRA_CLUSTER_NAME=cluster_test
+      - CASSANDRA_SEEDS=cassandra1,cassandra2,cassandra3
+      - MAX_HEAP_SIZE=512M
+      - HEAP_NEWSIZE=64M
+  cassandra2:
+    image: cassandra:latest
+    ports:
+      - 192.168.1.201:9042:9042
+    environment:
+      - CASSANDRA_CLUSTER_NAME=cluster_test
+      - CASSANDRA_SEEDS=cassandra1,cassandra2,cassandra3
+      - MAX_HEAP_SIZE=512M
+      - HEAP_NEWSIZE=64M
+  cassandra3:
+    image: cassandra:latest
+    ports:
+      - 192.168.1.202:9042:9042
+    environment:
+      - CASSANDRA_CLUSTER_NAME=cluster_test
+      - CASSANDRA_SEEDS=cassandra1,cassandra2,cassandra3
+      - MAX_HEAP_SIZE=512M
+      - HEAP_NEWSIZE=64M
