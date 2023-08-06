@@ -16,17 +16,16 @@
 > для скачивания Vagrant'а и шагов 4,5 скорее всего понадобится VPN 
 
 1. Склонировать репозиторий: `git clone https://github.com/nikcopernicus/peacock_test.git`
-2. Перейти в папку: `cd peacock_test`
-3. Инициализировать текущий каталог как среду Vagrant: `vagrant init`
-4. Установить плагин для VMware `vagrant plugin install vagrant-vmware-desktop`
-5. Добавить vagrant box `vagrant box add generic/ubuntu2204` 
-6. Поднять машины A и B: `vagrant up`
-7. Подключиться к машине B: `vagrant ssh uba`
-8. Подключиться через cqlsh к каждой из машин-образов на машине A:
-    -`cqlsh 192.168.1.200`
-    -`cqlsh 192.168.1.201`
-    -`cqlsh 192.168.1.202`
+1. Перейти в папку: `cd peacock_test`
+1. Инициализировать текущий каталог как среду Vagrant: `vagrant init`
+1. Установить плагин для VMware `vagrant plugin install vagrant-vmware-desktop`
+1. Добавить vagrant box `vagrant box add generic/ubuntu2204` 
+1. Поднять машины A и B: `vagrant up`
+1. Подключиться к машине B: `vagrant ssh uba`
+1. Подключиться через cqlsh к каждой из машин-образов на машине A: 
+    - `cqlsh 192.168.1.200`
+    - `cqlsh 192.168.1.201`
+    - `cqlsh 192.168.1.202`
 
 ## Результат
-
-
+![изображение](https://github.com/nikcopernicus/peacock_test/assets/60931253/ca2c2e0b-2a2a-40fa-8181-b681c61c7fa9)
