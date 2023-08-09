@@ -14,6 +14,7 @@
 Для создания и поднятия машин A и B были использованы Vagrant и VirtualBox
 
 Ссылка на скачивание Vagrant'a: https://disk.yandex.ru/d/7QA07XvEi5QqcQ
+
 Ссылка на скачивание VirtualBox'a: https://www.virtualbox.org/wiki/Downloads
 
 1. Склонировать репозиторий: `git clone https://github.com/nikcopernicus/peacock_test.git`
