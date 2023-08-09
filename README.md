@@ -11,23 +11,45 @@
 
 ## Инструкция:
 
-Для создания и поднятия машин A и B были использованы Vagrant и VirtualBox
-
-Ссылка на скачивание Vagrant'a: https://disk.yandex.ru/d/7QA07XvEi5QqcQ
+Для создания и поднятия машин A и B был использован VirtualBox
 
 Ссылка на скачивание VirtualBox'a: https://www.virtualbox.org/wiki/Downloads
 
-1. Склонировать репозиторий: `git clone https://github.com/nikcopernicus/peacock_test.git`
-1. Перейти в каталог: `cd peacock_test`
-1. Инициализировать текущий каталог как среду Vagrant: `vagrant init`
-1. Скачать vagrant box в текущий каталог: https://app.vagrantup.com/ubuntu/boxes/jammy64/versions/20230805.0.0/providers/virtualbox.box
-1. Добавить vagrant box `vagrant box add ubuntu/jammy64 jammy-server-cloudimg-amd64-vagrant.box` 
-1. Поднять машины A и B: `vagrant up`
-1. Подключиться к машине B: `vagrant ssh ubb`
-1. Подключиться через cqlsh к каждой из машин-образов на машине A: 
-    - `cqlsh 192.168.1.200`
+1. Создать машины uba и ubb (Ссылка на образ: https://ubuntu.com/download/desktop)
+Добавить обоим машинам адаптер внутренней сети в VirtualBox'е 
+(2 скрина)
+
+1. На машине uba:
+	- `sudo su`
+	- `mkdir ~/tmp`
+	- `cd ~/tmp`
+	Установить докер:
+	- `curl -fsSL https://get.docker.com -o install-docker.sh`
+	- `sh install-docker.sh`	
+	Склонировать репозиотрий:
+	- `git clone https://github.com/nikcopernicus/peacock_test`
+	- `cd peacock_test`
+	Настроить сеть через netplan:
+	- `mv 99_config.yaml /etc/netplan/99_config.yaml`
+	- `netplan apply`
+	Развернуть кластер из трех инстансов cassandra:
+	- `docker compose up -d`
+1. На машине ubb:
+	- `sudo su`
+	- `mkdir ~/tmp`
+	- `cd ~/tmp`
+	Склонировать репозиотрий:
+	- `git clone https://github.com/nikcopernicus/peacock_test`
+	- `cd peacock_test`
+	Настроить сеть через netplan:
+	- `mv 98_config.yaml /etc/netplan/98_config.yaml`
+	- `netplan apply`
+	Установить cqlsh:
+	- `snap install cqlsh`
+	Подключиться через cqlsh к каждой из машин-образов:
+	- `cqlsh 192.168.1.200`
     - `cqlsh 192.168.1.201`
     - `cqlsh 192.168.1.202`
 
 ## Результат
-![изображение](https://github.com/nikcopernicus/peacock_test/assets/60931253/ca2c2e0b-2a2a-40fa-8181-b681c61c7fa9)
+(2 скрина)
