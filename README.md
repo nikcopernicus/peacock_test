@@ -15,7 +15,7 @@
 
 Ссылка на скачивание VirtualBox'a: https://www.virtualbox.org/wiki/Downloads
 
-1. Создать машины uba и ubb (Ссылка на образ: https://ubuntu.com/download/desktop) Добавить обоим машинам адаптер внутренней сети в VirtualBox'е 
+Создать машины uba и ubb (Ссылка на образ: https://ubuntu.com/download/desktop) Добавить обоим машинам адаптер внутренней сети в VirtualBox'е 
 
 ![image](https://github.com/nikcopernicus/peacock_test/assets/60931253/664947da-6033-46ec-a2a9-11a11c6773ef)
 
