@@ -11,17 +11,18 @@
 
 ## Инструкция:
 
-Для создания и поднятия машин A и B были использованы Vagrant и VMware Workstation
+Для создания и поднятия машин A и B были использованы Vagrant и VirtualBox
 
-> для скачивания Vagrant'а и шагов 4,5 скорее всего понадобится VPN 
+Ссылка на скачивание Vagrant'a: https://disk.yandex.ru/d/7QA07XvEi5QqcQ
+Ссылка на скачивание VirtualBox'a: https://www.virtualbox.org/wiki/Downloads
 
 1. Склонировать репозиторий: `git clone https://github.com/nikcopernicus/peacock_test.git`
-1. Перейти в папку: `cd peacock_test`
+1. Перейти в каталог: `cd peacock_test`
 1. Инициализировать текущий каталог как среду Vagrant: `vagrant init`
-1. Установить плагин для VMware `vagrant plugin install vagrant-vmware-desktop`
-1. Добавить vagrant box `vagrant box add generic/ubuntu2204` 
+1. Скачать vagrant box в текущий каталог: https://app.vagrantup.com/ubuntu/boxes/jammy64/versions/20230805.0.0/providers/virtualbox.box
+1. Добавить vagrant box `vagrant box add ubuntu/jammy64 jammy-server-cloudimg-amd64-vagrant.box` 
 1. Поднять машины A и B: `vagrant up`
-1. Подключиться к машине B: `vagrant ssh uba`
+1. Подключиться к машине B: `vagrant ssh ubb`
 1. Подключиться через cqlsh к каждой из машин-образов на машине A: 
     - `cqlsh 192.168.1.200`
     - `cqlsh 192.168.1.201`
