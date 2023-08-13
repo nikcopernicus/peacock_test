@@ -40,6 +40,8 @@
 
 	Развернуть кластер из трех инстансов cassandra:
 	- `docker compose up -d`
+ 	- `iptables -I DOCKER-USER -i enp0s8 -s 0.0.0.0/0 -j ACCEPT`
+	
 1. На машине ubb:
 	- `sudo su`
 	- `mkdir ~/tmp`
