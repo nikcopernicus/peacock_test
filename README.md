@@ -17,9 +17,9 @@
 
 Создать машины uba и ubb (Ссылка на образ: https://ubuntu.com/download/desktop) Добавить обоим машинам адаптер сетвого моста в VirtualBox'е 
 
-![image](https://github.com/nikcopernicus/peacock_test/assets/60931253/664947da-6033-46ec-a2a9-11a11c6773ef)
+![image](https://github.com/nikcopernicus/peacock_test/assets/60931253/861c478a-904a-4f92-acf2-95dab0eb2039)
 
-![image](https://github.com/nikcopernicus/peacock_test/assets/60931253/2ce7c7f7-58a4-4067-8c58-bdcbcccd543d)
+![image](https://github.com/nikcopernicus/peacock_test/assets/60931253/007a111f-1e52-44af-8ef0-8f232b66a511)
 
 1. На машине uba:
 	- `sudo su`
@@ -62,8 +62,5 @@
     - `cqlsh 192.168.1.202`
 
 ## Результат
-![image](https://github.com/nikcopernicus/peacock_test/assets/60931253/d0610425-f5c6-442a-b74c-ec634462aca3)
 
-![image](https://github.com/nikcopernicus/peacock_test/assets/60931253/6e2f8792-d477-48b7-9f29-97b60a6bc9e4)
-
-
+![image](https://github.com/nikcopernicus/peacock_test/assets/60931253/ef1ef8ba-8eb3-44ec-9f26-594b9535e3d2)
