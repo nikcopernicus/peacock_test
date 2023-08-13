@@ -1,10 +1,14 @@
 network:
   version: 2
-  renderer: networkd
   ethernets:
     enp0s8:
       addresses:
-        - 192.168.1.197/24
-        - 192.168.1.200/24
-        - 192.168.1.201/24
-        - 192.168.1.202/24
+       - 192.168.0.65/24
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 8.8.4.4
+        search: []
+      routes:
+        - to: 192.168.1.198/32
+          scope: link
